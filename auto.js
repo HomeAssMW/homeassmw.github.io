@@ -71,9 +71,5 @@ function req(i)
 
 function makeRequest() {
     initi();
-	var xmlHttpRequest = getXMLHttpRequest();
-	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
-	xmlHttpRequest.open("GET", "https://h-a-sys.000webhostapp.com/tx2.php?id=99999&pw=25282528&unit=3", true);
-	xmlHttpRequest.send();
 }
 
