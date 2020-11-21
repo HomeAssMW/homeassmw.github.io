@@ -11,10 +11,42 @@ var i;
 var k;
 var j;
 var l;
+
+function initi()
+{ 
+    for(i=0;i<10;i++)
+    {
+    var k;
+    k=i+1;
+    butt[i] = document.getElementById("butt"+k);
+    buttstatus1[i] = document.getElementById("butt"+k+"status1");
+    buttstatus2[i] = document.getElementById("butt"+k+"status2");
+    }
+}
+
+function update()
+{
+    for(i=0;i<10;i++)
+    {
+    if (butt[i].checked == true)
+    {
+    buttstatus2[i].style.display = "block";
+    buttstatus1[i].style.display = "none";
+    } 
+    if (butt[i].checked == false)
+    {
+    buttstatus1[i].style.display = "block";
+    buttstatus2[i].style.display = "none";
+    }
+    }
+    
+}
+
 function req(i)
 {
     var t=i;
-    document.getElementById("txtHint2").innerHTML=t;
+    var p=t+1;
+    document.getElementById("txtHint2").innerHTML=p;
     if (butt[t].checked == true)
     {
         t=t+1;
@@ -30,5 +62,9 @@ function req(i)
     }
     
     
+}
+
+function makeRequest() {
+    initi();
 }
 
