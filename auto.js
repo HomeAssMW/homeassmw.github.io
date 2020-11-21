@@ -48,11 +48,12 @@ function update()
 function req(i)
 {
     var t=i;
-    document.getElementById("txtHint2").innerHTML=t;
+````var p=t+1;
+    document.getElementById("txtHint2").innerHTML=p;
     if (butt[t].checked == true)
     {
         t=t+1;
-        makeonrequest(t);
+	    update();
         document.getElementById("txtHint3").innerHTML="turning on";
         
 
@@ -60,7 +61,7 @@ function req(i)
     else if (butt[t].checked == false)
     {
         t=t+1;
-        makeoffrequest(t);
+	    update();
         document.getElementById("txtHint3").innerHTML="turning off";
 
     }
@@ -68,78 +69,6 @@ function req(i)
     
 }
 
-function update2()
-{
- 
-  for(l=0;l<100; l++)
-   {
-    for(j=4;j<100; j++)    
-     {
-      for(k=0;k<10;k++)
-       {
-        if(data.substr(l,j)==arrayon[k])
-         {
-             document.getElementById("txtHint2").innerHTML=(data.substr(l,j)==arrayon[k]);
-          butt[k].checked = true;
-          l=l+4;
-          j=j+4;
-         }
-        else if(data.substr(l,j)==arrayoff[k])
-         {
-          butt[k].checked = false;
-          l=l+4;
-          j=j+4;
-         }
-       }
-     }
-   }
-}
-
-
-
-function getXMLHttpRequest() {
-	var xmlHttpReq = false;
-	// to create XMLHttpRequest object in non-Microsoft browsers
-	if (window.XMLHttpRequest) {
-		xmlHttpReq = new XMLHttpRequest();
-	} else if (window.ActiveXObject) {
-		try {
-			// to create XMLHttpRequest object in later versions
-			// of Internet Explorer
-			xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
-		} catch (exp1) {
-			try {
-				// to create XMLHttpRequest object in older versions
-				// of Internet Explorer
-				xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
-			} catch (exp2) {
-				xmlHttpReq = false;
-			}
-		}
-	}
-	return xmlHttpReq;
-}
-/*
- * AJAX call starts with this function
- */
- 
-function makeonrequest(h) {
-	var xmlHttpRequest = getXMLHttpRequest();
-	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
-	xmlHttpRequest.open("POST", "https://h-a-sys.000webhostapp.com/tx2.php?id=99999&pw=25282528&unit=2"+h+"&b"+h+"=1", true);
-	xmlHttpRequest.send();
-}
-
-
-function makeoffrequest(h) {
-	var xmlHttpRequest = getXMLHttpRequest();
-	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
-	xmlHttpRequest.open("POST", "https://h-a-sys.000webhostapp.com/tx2.php?id=99999&pw=25282528&unit=2"+h+"&b"+h+"=0", true);
-	xmlHttpRequest.send();
-}
- 
- 
- 
 function makeRequest() {
     initi();
 	var xmlHttpRequest = getXMLHttpRequest();
@@ -148,23 +77,3 @@ function makeRequest() {
 	xmlHttpRequest.send();
 }
 
-/*
- * Returns a function that waits for the state change in XMLHttpRequest
- */
-function getReadyStateHandler(xmlHttpRequest) {
-
-	// an anonymous function returned
-	// it listens to the XMLHttpRequest instance
-	return function() {
-		if (xmlHttpRequest.readyState == 4) {
-			if (xmlHttpRequest.status == 200) {
-				data = xmlHttpRequest.responseText;
-				document.getElementById("txtHint").innerHTML=data;
-				update2();
-				update();
-			} else {
-				alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
-			}
-		}setTimeout(makeRequest,10000);
-	};
-}
