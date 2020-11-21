@@ -11,49 +11,13 @@ var i;
 var k;
 var j;
 var l;
-
-function initi()
-{ 
-    for(i=0;i<10;i++)
-    {
-    var k;
-    k=i+1;
-    butt[i] = document.getElementById("butt"+k);
-    buttstatus1[i] = document.getElementById("butt"+k+"status1");
-    buttstatus2[i] = document.getElementById("butt"+k+"status2");
-    }
-}
-
-
-
-function update()
-{
-    for(i=0;i<10;i++)
-    {
-    if (butt[i].checked == true)
-    {
-    buttstatus2[i].style.display = "block";
-    buttstatus1[i].style.display = "none";
-    } 
-    if (butt[i].checked == false)
-    {
-    buttstatus1[i].style.display = "block";
-    buttstatus2[i].style.display = "none";
-    }
-    }
-    
-}
-
-
 function req(i)
 {
     var t=i;
-````var p=t+1;
-    document.getElementById("txtHint2").innerHTML=p;
+    document.getElementById("txtHint2").innerHTML=t;
     if (butt[t].checked == true)
     {
         t=t+1;
-	    update();
         document.getElementById("txtHint3").innerHTML="turning on";
         
 
@@ -61,15 +25,10 @@ function req(i)
     else if (butt[t].checked == false)
     {
         t=t+1;
-	    update();
         document.getElementById("txtHint3").innerHTML="turning off";
 
     }
     
     
-}
-
-function makeRequest() {
-    initi();
 }
 
