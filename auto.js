@@ -1,4 +1,5 @@
 var p=0;
+var database;
 
 
 
@@ -20,7 +21,13 @@ function initi()
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
    console.log('firebase is loaded');
-
+   database= = firebase.database;
+   var ref = database.ref('scores');
+   var data = {
+       name:"MW",
+       score:1000
+   }
+    ref.push(data);
     for(p=1;p<11;p++)
     {
     console.log('The init will load now.');
