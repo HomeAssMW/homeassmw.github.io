@@ -1,34 +1,4 @@
-function initi()
-{ 
-    for(i=0;i<10;i++)
-    {
-    var k;
-    k=i+1;
-    butt[i] = document.getElementById("butt"+k);
-    buttstatus1[i] = document.getElementById("butt"+k+"status1");
-    buttstatus2[i] = document.getElementById("butt"+k+"status2");
-    }
-}
-
-function update()
-{
-    for(i=0;i<10;i++)
-    {
-    if (butt[i].checked == true)
-    {
-    buttstatus2[i].style.display = "block";
-    buttstatus1[i].style.display = "none";
-    } 
-    if (butt[i].checked == false)
-    {
-    buttstatus1[i].style.display = "block";
-    buttstatus2[i].style.display = "none";
-    }
-    }
-    
-}
-
-function req(p)
+function req(var p)
 {
     var t;
     t=p+1;
@@ -52,5 +22,3 @@ function req(p)
     
     
 }
-
-
