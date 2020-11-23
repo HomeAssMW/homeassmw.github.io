@@ -44,10 +44,11 @@ function update()
     
 }
 
-function req(p)
+function req(t)
 {
+    var p=t-1
     document.getElementById("txtHint2").innerHTML=p;
-    if (butt[p].checked == true)
+    if (butt[t].checked == true)
     {
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
@@ -55,7 +56,7 @@ function req(p)
         
 
     } 
-    else if (butt[p].checked == false)
+    else if (butt[t].checked == false)
     {
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
