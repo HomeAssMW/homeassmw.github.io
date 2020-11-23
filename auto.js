@@ -4,7 +4,7 @@ function initi()
 { 
     for(p=1;p<11;p++)
     {
-    console.log('The Script will load now.');
+    console.log('The init will load now.');
     document.getElementById("txtHint2").innerHTML=p;
     if (document.getElementById("butt"+p).checked != false)
     {
@@ -26,6 +26,7 @@ function initi()
 
 function req(p)
 {
+    console.log('The req will load now.')
     document.getElementById("txtHint2").innerHTML=p;
     if (document.getElementById("butt"+p).checked != false)
     {
