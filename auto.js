@@ -6,6 +6,8 @@ var buttold=[];
 var buttnew=[];
 var buttstatus1=[];
 var buttstatus2=[];
+var butstatus1=[];
+var butstatus2=[];
 var ind=[(0,3)];
 var i;
 var k;
@@ -47,9 +49,13 @@ function req(i)
     var t=i;
     var p=t+1;
     document.getElementById("txtHint2").innerHTML=p;
+    butstatus1 = document.getElementById("butt"+t+"status1");
+    butstatus2 = document.getElementById("butt"+t+"status2");
     if (butt[t].checked == true)
     {
         t=t+1;
+        butstatus2.style.display = "block";
+        butstatus1.style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
         
 
@@ -57,6 +63,8 @@ function req(i)
     else if (butt[t].checked == false)
     {
         t=t+1;
+        butstatus1.style.display = "block";
+        butstatus2.style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
 
     }
