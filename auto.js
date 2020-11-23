@@ -28,6 +28,7 @@ function initi()
        score:1000
    }
     ref.push(data);
+    console.log(data);
     for(p=1;p<11;p++)
     {
     console.log('The init will load now.');
