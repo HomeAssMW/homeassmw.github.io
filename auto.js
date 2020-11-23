@@ -1,5 +1,5 @@
 var p=0;
-var database;
+
 
 
 
@@ -21,7 +21,7 @@ function initi()
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
    console.log('firebase is loaded');
-   database = firebase.database;
+   var database = firebase.database;
    var ref = database.ref('scores');
    var data = {
        name:"MW",
