@@ -23,6 +23,7 @@ function initi()
    console.log('firebase is loaded');
    var database = firebase.database;
        console.log('firebase is loaded');
+    console.log(database);
    var ref = database.ref('home-auto-19214');
        console.log('firebase is loaded');
    var data = {
