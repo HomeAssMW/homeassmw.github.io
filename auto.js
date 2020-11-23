@@ -22,7 +22,7 @@ function initi()
    firebase.initializeApp(firebaseConfig);
    console.log('firebase is loaded');
    var database = firebase.database;
-   var ref = database.ref('scores');
+   var ref = database.ref('home-auto-19214');
    var data = {
        name:"MW",
        score:1000
