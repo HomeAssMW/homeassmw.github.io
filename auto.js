@@ -52,8 +52,8 @@ function req(i)
     if (butt[t].checked == true)
     {
         t=t+1;
-        document.getElementById("butt"+i+"status1").style.display = "block";
-        document.getElementById("butt"+i+"status2").style.display = "none";
+        document.getElementById("butt"+p+"status1").style.display = "block";
+        document.getElementById("butt"+p+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
         
 
@@ -61,8 +61,8 @@ function req(i)
     else if (butt[t].checked == false)
     {
         t=t+1;
-        document.getElementById("butt"+i+"status2").style.display = "block";
-        document.getElementById("butt"+i+"status1").style.display = "none";
+        document.getElementById("butt"+p+"status2").style.display = "block";
+        document.getElementById("butt"+p+"status1").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
 
     }
