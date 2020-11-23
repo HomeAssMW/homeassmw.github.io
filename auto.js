@@ -44,21 +44,21 @@ function update()
     
 }
 
-function req(i)
+function req(p)
 {
-    document.getElementById("txtHint2").innerHTML=i;
-    if (butt[i].checked == true)
+    document.getElementById("txtHint2").innerHTML=p;
+    if (butt[p].checked == true)
     {
-        document.getElementById("butt"+i+"status1").style.display = "block";
-        document.getElementById("butt"+i+"status2").style.display = "none";
+        document.getElementById("butt"+p+"status2").style.display = "block";
+        document.getElementById("butt"+p+"status1").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
         
 
     } 
-    else if (butt[i].checked == false)
+    else if (butt[p].checked == false)
     {
-        document.getElementById("butt"+i+"status2").style.display = "block";
-        document.getElementById("butt"+i+"status1").style.display = "none";
+        document.getElementById("butt"+p+"status1").style.display = "block";
+        document.getElementById("butt"+p+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
 
     }
