@@ -19,7 +19,6 @@ function initi()
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
-   firebase.analytics();
    console.log('firebase is loaded');
 
     for(p=1;p<11;p++)
