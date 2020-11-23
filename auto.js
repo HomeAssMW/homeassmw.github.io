@@ -44,11 +44,10 @@ function update()
     
 }
 
-function req(t)
+function req(p)
 {
-    var p=t-1
     document.getElementById("txtHint2").innerHTML=p;
-    if (butt[t].checked == true)
+    if (document.getElementById("butt"+p).checked == true)
     {
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
@@ -56,7 +55,7 @@ function req(t)
         
 
     } 
-    else if (butt[t].checked == false)
+    else if (document.getElementById("butt"+p).checked == false)
     {
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
@@ -67,7 +66,4 @@ function req(t)
     
 }
 
-function makeRequest() {
-    initi();
-}
 
