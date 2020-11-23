@@ -46,6 +46,7 @@ function update()
 
 function req(p)
 {
+    p++;
     document.getElementById("txtHint2").innerHTML=p;
     if (document.getElementById("butt"+p).checked == true)
     {
