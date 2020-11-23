@@ -1,4 +1,4 @@
-function req(var p)
+function req(int p)
 {
     document.getElementById("txtHint2").innerHTML=p;
     if (document.getElementById("butt"+p).checked == true)
