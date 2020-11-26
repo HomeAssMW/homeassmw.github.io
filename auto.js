@@ -1,7 +1,5 @@
 var p=0;
 var applications=["start","Fan","Inside Light 1","Inside Light 2"];
-var StaDet1[];
-var StaDet2[];
 
 
 function initi()
@@ -54,9 +52,9 @@ function gotdata(data)
   for (var i = 0; i < keys.length; i++) {
       var h=i+1;
     var k = keys[i];
-    StaDet1[h]  = db[k].Status;
-      StaDet2[h]  = db[k].Value;
-      console.log(StaDet1[h],StaDet2[h]);
+    var StaDet1  = db[k].Status;
+    var StaDet2  = db[k].Value;
+      console.log(StaDet1,StaDet2);
   }
     
 }
