@@ -55,6 +55,21 @@ function gotdata(data)
     var StaDet1  = db[k].Status;
     var StaDet2  = db[k].Value;
       console.log(StaDet1,StaDet2);
+      var h=i+1;
+      if(StaDet2==1)
+      {
+        document.getElementById("butt"+h).checked = true;
+        document.getElementById("butt"+h+"status2").style.display = "block";
+        document.getElementById("butt"+h+"status1").style.display = "none";
+        document.getElementById("txtHint3").innerHTML="turning on";
+      }
+      else if(StaDet2==0)
+      {
+          document.getElementById("butt"+h).checked = false;
+        document.getElementById("butt"+h+"status2").style.display = "block";
+        document.getElementById("butt"+h+"status1").style.display = "none";
+        document.getElementById("txtHint3").innerHTML="turning on";
+      }
   }
     
 }
