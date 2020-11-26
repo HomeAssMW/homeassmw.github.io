@@ -16,7 +16,7 @@ function initi()
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
-   console.log('firebase 1');
+   console.log('firebase');
    var database = firebase.database();
     var ref = database.ref('Home');
     ref.on('value', gotdata, errdata);
@@ -70,7 +70,7 @@ function req(p)
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
-        var ref = database.ref('Home/'+application[p]);
+        var ref = database.ref('Home/'+applications[p]);
         var data={
         Status: "OFF" , Value : 1  
         }
@@ -85,7 +85,7 @@ function req(p)
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
-        var ref = database.ref('Home/'+application[p]);
+        var ref = database.ref('Home/'+applications[p]);
         var data={
         Status: "OFF" , Value : 0  
         }
