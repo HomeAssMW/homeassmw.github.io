@@ -18,9 +18,7 @@ function initi()
    firebase.initializeApp(firebaseConfig);
    console.log('firebase 1');
    var database = firebase.database();
-    var ref = database.ref('Home/FAN');
-    ref.set(data);
-    console.log(data);
+    var ref = database.ref('Home');
     ref.on('value', gotdata, errdata);
 
     
@@ -70,8 +68,9 @@ function req(p)
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
+        var ref = database.ref('Home/'+application[p]);
         var data={
-        Status: application[p] , Value : 1  
+        Status: "OFF" , Value : 1  
         }
         ref.set(data);
         console.log(data);
@@ -84,8 +83,9 @@ function req(p)
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
+        var ref = database.ref('Home/'+application[p]);
         var data={
-        Status: application[p] , Value : 0  
+        Status: "OFF" , Value : 0  
         }
         ref.set(data);
         console.log(data);
