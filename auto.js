@@ -1,5 +1,5 @@
 var p=0;
-var applications=["Fan","Inside Light 1","Inside Light 2"];
+var applications=["start","Fan","Inside Light 1","Inside Light 2"];
 
 
 function initi()
@@ -72,7 +72,7 @@ function req(p)
         document.getElementById("txtHint3").innerHTML="turning on";
         var ref = database.ref('Home/'+applications[p]);
         var data={
-        Status: "OFF" , Value : 1  
+        Status: "ON" , Value : 1  
         }
         ref.set(data);
         console.log(data);
