@@ -16,7 +16,7 @@ function initi()
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
-   console.log('firebase');
+   console.log('firebase 1');
    var database = firebase.database();
     var ref = database.ref('Home');
     ref.on('value', gotdata, errdata);
