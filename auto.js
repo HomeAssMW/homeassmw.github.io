@@ -1,6 +1,3 @@
-import firebase from "firebase/app";
-import "firebase/database";
-
 var p=0;
 
 
