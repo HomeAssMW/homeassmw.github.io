@@ -50,7 +50,6 @@ function gotdata(data)
     var db = data.val();
   var keys = Object.keys(db);
   for (var i = 0; i < keys.length; i++) {
-      var h=i+1;
     var k = keys[i];
     var StaDet1  = db[k].Status;
     var StaDet2  = db[k].Value;
