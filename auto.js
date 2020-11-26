@@ -1,7 +1,7 @@
 var p=0;
 var applications=["start","Fan","Inside Light 1","Inside Light 2"];
-var StaDet1;
-var StaDet2;
+var StaDet1[];
+var StaDet2[];
 
 
 function initi()
