@@ -22,7 +22,7 @@ function initi()
         name: "Most Wanted", score : 50  
     }
     console.log(data);
-    ref.push(data);
+    ref.on('value', gotdata, errdata);
 
     
     for(p=1;p<11;p++)
@@ -46,6 +46,21 @@ function initi()
     }
     }
 }
+
+
+function gotdata(data)
+{
+    console.log(data.val());
+    
+}
+
+function errdata(err)
+{
+console.log('Error');
+console.log(err);
+
+}
+
 
 function req(p)
 {
