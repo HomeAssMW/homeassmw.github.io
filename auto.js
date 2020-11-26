@@ -1,6 +1,6 @@
 var p=0;
 var applications=["start","Fan","Inside Light 1","Inside Light 2"];
-var StsDet1;
+var StaDet1;
 var StaDet2;
 
 
