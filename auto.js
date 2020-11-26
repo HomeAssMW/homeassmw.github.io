@@ -17,9 +17,9 @@ function initi()
    firebase.initializeApp(firebaseConfig);
    console.log('firebase');
    var database = firebase.database();
-    var ref = database.ref('Home');
+    var ref = database.ref('Home/-MN3IawMnv03mZTGqF6y');
     var data={
-        name: "Most Wanted", score : 50  
+        Status: "ON", Value : 1  
     }
     console.log(data);
     ref.on('value', gotdata, errdata);
