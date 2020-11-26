@@ -21,6 +21,7 @@ function initi()
     var data={
         Status: "ON", Value : 1  
     }
+    ref.push(data);
     console.log(data);
     ref.on('value', gotdata, errdata);
 
