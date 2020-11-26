@@ -1,10 +1,4 @@
 var p=0;
-var db;
-
-
-
-
-
 
 
 function initi()
@@ -22,18 +16,9 @@ function initi()
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
    console.log('firebase 1');
-   db = firebase.database;
-       console.log('firebase is loaded');
+   var database = firebase.database();
+
     
-   var reff = db.ref('home-auto-19214');
-       console.log('firebase is loaded');
-   var data = {
-       name:"MW",
-       score:1000
-   }
-    reff.push(data);
-       console.log('firebase is loaded');
-    console.log(data);
     for(p=1;p<11;p++)
     {
     console.log('The init will load now.');
