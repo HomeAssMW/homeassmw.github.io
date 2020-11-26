@@ -1,3 +1,6 @@
+import firebase from "firebase/app";
+import "firebase/database";
+
 var p=0;
 
 
@@ -25,13 +28,13 @@ function initi()
    var database = firebase.database;
        console.log('firebase is loaded');
     
-   var ref = database.ref('home-auto-19214');
+   var reff = database.ref('home-auto-19214');
        console.log('firebase is loaded');
    var data = {
        name:"MW",
        score:1000
    }
-    ref.push(data);
+    reff.push(data);
        console.log('firebase is loaded');
     console.log(data);
     for(p=1;p<11;p++)
