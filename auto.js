@@ -15,13 +15,13 @@ function initi()
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
-   console.log('firebase');
+   console.log('firebase 1');
    var database = firebase.database();
-    var ref = database.ref('Home/-MN3IawMnv03mZTGqF6y');
+    var ref = database.ref('Home/FAN');
     var data={
         Status: "ON", Value : 1  
     }
-    ref.push(data);
+    ref.set(data);
     console.log(data);
     ref.on('value', gotdata, errdata);
 
