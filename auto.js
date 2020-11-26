@@ -61,18 +61,6 @@ console.log(err);
 
 function req(p)
 {
-    var firebaseConfig = {
-    apiKey: "AIzaSyDDsyejmZlCIjMUd1-boxGZMNeU3simIrs",
-    authDomain: "home-auto-19214.firebaseapp.com",
-    databaseURL: "https://home-auto-19214.firebaseio.com",
-    projectId: "home-auto-19214",
-    storageBucket: "home-auto-19214.appspot.com",
-    messagingSenderId: "972026675084",
-    appId: "1:972026675084:web:db664fe21e653274e1a0a9",
-    measurementId: "G-Q9WNFQ9EB7"
-   };
-   // Initialize Firebase
-   firebase.initializeApp(firebaseConfig);
    console.log('firebase');
    var database = firebase.database();
     console.log('The req will load now.');
