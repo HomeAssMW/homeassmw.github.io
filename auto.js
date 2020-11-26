@@ -49,6 +49,7 @@ function gotdata(data)
 {
     var db = data.val();
   var keys = Object.keys(db);
+    console.log(keys.length);
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
     var StaDet1  = db[k].Status;
