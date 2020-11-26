@@ -23,8 +23,7 @@ function initi()
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
-   console.log('firebase is loaded');
-    console.log(database);
+   console.log('firebase');
    var database = firebase.database;
        console.log('firebase is loaded');
     
