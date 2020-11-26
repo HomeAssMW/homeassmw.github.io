@@ -1,4 +1,5 @@
 var p=0;
+var applications=["Fan","Inside Light 1","Inside Light 2"];
 
 
 function initi()
@@ -18,9 +19,6 @@ function initi()
    console.log('firebase 1');
    var database = firebase.database();
     var ref = database.ref('Home/FAN');
-    var data={
-        Status: "ON", Value : 1  
-    }
     ref.set(data);
     console.log(data);
     ref.on('value', gotdata, errdata);
@@ -72,6 +70,12 @@ function req(p)
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
+        var data={
+        Status: application[p] , Value : 1  
+        }
+        ref.set(data);
+        console.log(data);
+        ref.on('value', gotdata, errdata);
         
 
     } 
@@ -80,6 +84,12 @@ function req(p)
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
+        var data={
+        Status: application[p] , Value : 0  
+        }
+        ref.set(data);
+        console.log(data);
+        ref.on('value', gotdata, errdata);
 
     }
     
