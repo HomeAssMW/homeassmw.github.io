@@ -21,10 +21,10 @@ function initi()
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
    console.log('firebase');
-   var database = firebase.database;
+   var db = firebase.database;
        console.log('firebase is loaded');
     
-   var reff = database.ref('home-auto-19214');
+   var reff = db.ref('home-auto-19214');
        console.log('firebase is loaded');
    var data = {
        name:"MW",
