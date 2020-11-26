@@ -1,4 +1,5 @@
 var p=0;
+var db;
 
 
 
@@ -20,8 +21,8 @@ function initi()
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
-   console.log('firebase');
-   var db = firebase.database;
+   console.log('firebase 1');
+   db = firebase.database;
        console.log('firebase is loaded');
     
    var reff = db.ref('home-auto-19214');
