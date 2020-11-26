@@ -17,6 +17,12 @@ function initi()
    firebase.initializeApp(firebaseConfig);
    console.log('firebase');
    var database = firebase.database();
+    var ref = database.ref('Home');
+    var data={
+        name: "Most Wanted", score : 50  
+    }
+    console.log(data);
+    ref.push(data);
 
     
     for(p=1;p<11;p++)
