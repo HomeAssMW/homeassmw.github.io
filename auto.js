@@ -54,8 +54,8 @@ function gotdata(data)
   for (var i = 0; i < keys.length; i++) {
       var h=i+1;
     var k = keys[i];
-    StaDet1[h]  = db.Status[k];
-      StaDet2[h]  = db.Value[k];
+    StaDet1[h]  = db[k].Status;
+      StaDet2[h]  = db[k].Value;
       console.log(StaDet1[h],StaDet2[h]);
   }
     
