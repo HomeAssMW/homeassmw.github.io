@@ -16,7 +16,6 @@ function initi()
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
-   console.log('firebase 1');
    var database = firebase.database();
     var ref = database.ref('Lab');
     ref.on('value', gotdata, errdata);
@@ -24,7 +23,6 @@ function initi()
     
     for(p=1;p<11;p++)
     {
-    console.log('The init will load now.');
     document.getElementById("txtHint2").innerHTML=p;
     if (document.getElementById("butt"+p).checked != false)
     {
@@ -49,12 +47,10 @@ function gotdata(data)
 {
     var db = data.val();
   var keys = Object.keys(db);
-    console.log(keys.length);
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
     var StaDet1  = db[k].Status;
     var StaDet2  = db[k].Value;
-      console.log(StaDet1,StaDet2);
       var h=i+1;
       if(StaDet2==1)
       {
@@ -84,9 +80,7 @@ console.log(err);
 
 function req(p)
 {
-   console.log('firebase');
    var database = firebase.database();
-    console.log('The req will load now.');
     document.getElementById("txtHint2").innerHTML=p;
     if (document.getElementById("butt"+p).checked != false)
     {
@@ -98,7 +92,6 @@ function req(p)
         Status: "ON" , Value : 1  
         }
         ref.set(data);
-        console.log(data);
         ref.on('value', gotdata, errdata);
         
 
@@ -113,7 +106,6 @@ function req(p)
         Status: "OFF" , Value : 0  
         }
         ref.set(data);
-        console.log(data);
         ref.on('value', gotdata, errdata);
 
     }
