@@ -66,8 +66,8 @@ function gotdata(data)
       else if(StaDet2==0)
       {
           document.getElementById("butt"+h).checked = false;
-        document.getElementById("butt"+h+"status2").style.display = "block";
-        document.getElementById("butt"+h+"status1").style.display = "none";
+        document.getElementById("butt"+h+"status1").style.display = "block";
+        document.getElementById("butt"+h+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
       }
   }
