@@ -5,14 +5,14 @@ var applications=["start","Home Theater","Laptop","Inside Light 1","Inside Light
 function initi()
 { 
     var firebaseConfig = {
-    apiKey: "AIzaSyDDsyejmZlCIjMUd1-boxGZMNeU3simIrs",
-    authDomain: "home-auto-19214.firebaseapp.com",
-    databaseURL: "https://home-auto-19214.firebaseio.com",
-    projectId: "home-auto-19214",
-    storageBucket: "home-auto-19214.appspot.com",
-    messagingSenderId: "972026675084",
-    appId: "1:972026675084:web:db664fe21e653274e1a0a9",
-    measurementId: "G-Q9WNFQ9EB7"
+    apiKey: "AIzaSyAlCeK_xNfjgQMPqNdFUB8Gc0yFzIj2Nys",
+    authDomain: "homeass-2528.firebaseapp.com",
+    databaseURL: "https://homeass-2528.firebaseio.com",
+    projectId: "homeass-2528",
+    storageBucket: "homeass-2528.appspot.com",
+    messagingSenderId: "973082369587",
+    appId: "1:973082369587:web:54c67a1630b2a044594d46",
+    measurementId: "G-24BQMQSFLL"
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
