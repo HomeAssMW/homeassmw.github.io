@@ -1,5 +1,5 @@
 var p=0;
-var applications=["start","Fan","Inside Light 1","Inside Light 2"];
+var applications=["start","Home Theater","Laptop","Inside Light 1","Inside Light 2","OutSide Light Front","Outside Light Back","Fan","Night Lamp"];
 
 
 function initi()
