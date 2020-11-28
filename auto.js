@@ -89,7 +89,7 @@ function req(p)
         document.getElementById("txtHint3").innerHTML="turning on";
         var ref = database.ref('Lab/'+applications[p]);
         var data={
-        Status: true , Value : 1  
+        Status: true
         }
         ref.set(data);
         ref.on('value', gotdata, errdata);
@@ -103,7 +103,7 @@ function req(p)
         document.getElementById("txtHint3").innerHTML="turning off";
         var ref = database.ref('Lab/'+applications[p]);
         var data={
-        Status: false , Value : 0  
+        Status: false
         }
         ref.set(data);
         ref.on('value', gotdata, errdata);
