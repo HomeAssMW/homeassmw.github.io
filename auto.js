@@ -28,7 +28,6 @@ function initi()
     {
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
-        document.getElementById("txtHint3").innerHTML="turning on";
         
 
     } 
@@ -36,7 +35,6 @@ function initi()
     {
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
-        document.getElementById("txtHint3").innerHTML="turning off";
 
     }
     }
@@ -56,14 +54,12 @@ function gotdata(data)
         document.getElementById("butt"+h).checked = true;
         document.getElementById("butt"+h+"status2").style.display = "block";
         document.getElementById("butt"+h+"status1").style.display = "none";
-        document.getElementById("txtHint3").innerHTML="turning on";
       }
       else if(!StaDet)
       {
           document.getElementById("butt"+h).checked = false;
         document.getElementById("butt"+h+"status1").style.display = "block";
         document.getElementById("butt"+h+"status2").style.display = "none";
-        document.getElementById("txtHint3").innerHTML="turning on";
       }
   }
     
