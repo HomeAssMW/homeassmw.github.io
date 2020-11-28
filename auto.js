@@ -1,5 +1,5 @@
 var p=0;
-var applications=["start","start","start","1 Home Theater","2 Laptop","3 Inside Light 1","4 Inside Light 2","5 OutSide Light Front","6 Outside Light Back","7 Fan","8 Night Lamp"];
+var applications=["start","1 Home Theater","2 Laptop","3 Inside Light 1","4 Inside Light 2","5 OutSide Light Front","6 Outside Light Back","7 Fan","8 Night Lamp"];
 
 
 function initi()
@@ -77,7 +77,7 @@ function req(p)
 {
    var database = firebase.database();
     document.getElementById("txtHint2").innerHTML=p;
-    if (document.getElementById("butt"+p).checked != false)
+    if (document.getElementById("butt"+p).checked == true)
     {
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
