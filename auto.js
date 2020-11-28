@@ -49,17 +49,16 @@ function gotdata(data)
   var keys = Object.keys(db);
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
-    var StaDet1  = db[k].Status;
-    var StaDet2  = db[k].Value;
+    var StaDet  = db[k].Status;
       var h=i+1;
-      if(StaDet2==1)
+      if(StaDet)
       {
         document.getElementById("butt"+h).checked = true;
         document.getElementById("butt"+h+"status2").style.display = "block";
         document.getElementById("butt"+h+"status1").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
       }
-      else if(StaDet2==0)
+      else if(!StaDet)
       {
           document.getElementById("butt"+h).checked = false;
         document.getElementById("butt"+h+"status1").style.display = "block";
