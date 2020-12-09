@@ -75,7 +75,7 @@ console.log(err);
 
 function req(p)
 {
-    int t;
+    var t;
    var database = firebase.database();
     document.getElementById("txtHint2").innerHTML=p;
     console.log("1"); 
