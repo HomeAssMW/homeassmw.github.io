@@ -77,8 +77,10 @@ function req(p)
 {
    var database = firebase.database();
     document.getElementById("txtHint2").innerHTML=p;
+    console.log("1"); 
     if (document.getElementById("butt"+p).checked == true)
     {
+        console.log("2"); 
         document.getElementById("butt"+p+"status2").style.display = "block";
         document.getElementById("butt"+p+"status1").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning on";
@@ -93,6 +95,7 @@ function req(p)
     } 
     else if (document.getElementById("butt"+p).checked == false)
     {
+        console.log("3"); 
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
