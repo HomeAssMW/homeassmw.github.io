@@ -65,14 +65,18 @@ input:checked + .slider:before {
 #but1
 {
     position: absolute;
+        top:100px;
+        left:400px;
 }
 #butt1status1
 {
     position: absolute;
+        top:100px;
 }
 #butt1status2
 {
     position: absolute;
+        top:100px;
 }
 
 
