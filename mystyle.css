@@ -72,13 +72,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt1status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -92,13 +92,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt2status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -113,13 +113,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt3status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -133,13 +133,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt4status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -154,13 +154,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt5status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -174,13 +174,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt6status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -194,13 +194,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt7status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -214,13 +214,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt8status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -234,13 +234,13 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt9status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 
 
@@ -254,11 +254,11 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
 #butt10status2
 {
     position: absolute;
     top:-10px;
-    left:-100px;
+    left:0px;
 }
