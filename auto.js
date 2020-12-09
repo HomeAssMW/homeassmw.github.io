@@ -75,12 +75,13 @@ console.log(err);
 
 function req(p)
 {
+    int t;
    var database = firebase.database();
     document.getElementById("txtHint2").innerHTML=p;
     console.log("1"); 
     if (document.getElementById("butt"+p).checked == true)
     {
-        int t=p-1;
+        t=p-1;
         console.log("2"); 
         document.getElementById("butt"+p+"status2").style.display = "block";
         console.log("4");
@@ -100,7 +101,7 @@ function req(p)
     } 
     else if (document.getElementById("butt"+p).checked == false)
     {
-        int t=p-1;
+        t=p-1;
         console.log("3"); 
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
