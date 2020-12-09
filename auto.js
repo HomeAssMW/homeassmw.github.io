@@ -82,10 +82,15 @@ function req(p)
     {
         console.log("2"); 
         document.getElementById("butt"+p+"status2").style.display = "block";
+        console.log("4");
         document.getElementById("butt"+p+"status1").style.display = "none";
+        console.log("5");
         document.getElementById("txtHint3").innerHTML="turning on";
+        console.log("6");
         var ref = database.ref('Lab/'+applications[p]);
+        console.log("7");
         var data={
+            console.log("2");
         Status: true
         }
         ref.set(data);
