@@ -90,7 +90,6 @@ function req(p)
         var ref = database.ref('Lab/'+applications[p]);
         console.log("7");
         var data={
-            console.log("2");
         Status: true
         }
         ref.set(data);
