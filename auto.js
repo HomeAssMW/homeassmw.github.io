@@ -21,23 +21,23 @@ function initi()
     ref.on('value', gotdata, errdata);
 
     
-    for(p=1;p<11;p++)
-    {
-    document.getElementById("txtHint2").innerHTML=p;
-    if (document.getElementById("butt"+p).checked != false)
-    {
-        document.getElementById("butt"+p+"status2").style.display = "block";
-        document.getElementById("butt"+p+"status1").style.display = "none";
+    //for(p=1;p<11;p++)
+    //{
+    //document.getElementById("txtHint2").innerHTML=p;
+    //if (document.getElementById("butt"+p).checked != false)
+    //{
+    //    document.getElementById("butt"+p+"status2").style.display = "block";
+    //    document.getElementById("butt"+p+"status1").style.display = "none";
         
 
-    } 
-    else if (document.getElementById("butt"+p).checked == false)
-    {
-        document.getElementById("butt"+p+"status1").style.display = "block";
-        document.getElementById("butt"+p+"status2").style.display = "none";
+    //} 
+    //else if (document.getElementById("butt"+p).checked == false)
+    //{
+    //    document.getElementById("butt"+p+"status1").style.display = "block";
+    //    document.getElementById("butt"+p+"status2").style.display = "none";
 
-    }
-    }
+    //}
+    //}
 }
 
 
