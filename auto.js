@@ -1,5 +1,5 @@
 var p=0;
-var applications=["start","1 Home Theater","2 Laptop","3 Inside Light 1","4 Inside Light 2","5 OutSide Light Front","6 Outside Light Back","7 Fan","8 Night Lamp"];
+var applications=["1 Home Theater","2 Laptop","3 Inside Light 1","4 Inside Light 2","5 OutSide Light Front","6 Outside Light Back","7 Fan","8 Night Lamp"];
 
 
 function initi()
@@ -80,14 +80,15 @@ function req(p)
     console.log("1"); 
     if (document.getElementById("butt"+p).checked == true)
     {
-        console.log("20"); 
+        int t=p-1;
+        console.log("2"); 
         document.getElementById("butt"+p+"status2").style.display = "block";
         console.log("4");
         document.getElementById("butt"+p+"status1").style.display = "none";
         console.log("5");
         document.getElementById("txtHint3").innerHTML="turning on";
         console.log("6");
-        var ref = database.ref('Lab/'+applications[p]);
+        var ref = database.ref('Lab/'+applications[t]);
         console.log("7");
         var data={
         Status: true
@@ -99,11 +100,12 @@ function req(p)
     } 
     else if (document.getElementById("butt"+p).checked == false)
     {
+        int t=p-1;
         console.log("3"); 
         document.getElementById("butt"+p+"status1").style.display = "block";
         document.getElementById("butt"+p+"status2").style.display = "none";
         document.getElementById("txtHint3").innerHTML="turning off";
-        var ref = database.ref('Lab/'+applications[p]);
+        var ref = database.ref('Lab/'+applications[t]);
         var data={
         Status: false
         }
