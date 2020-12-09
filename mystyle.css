@@ -18,7 +18,7 @@ body
   height: 0;
 }
 
-.slider {
+/*.slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -40,7 +40,7 @@ body
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
-}
+}*/
 
 input:checked + .slider {
   background-color: #2196F3;
