@@ -80,7 +80,7 @@ function req(p)
     console.log("1"); 
     if (document.getElementById("butt"+p).checked == true)
     {
-        console.log("2"); 
+        console.log("20"); 
         document.getElementById("butt"+p+"status2").style.display = "block";
         console.log("4");
         document.getElementById("butt"+p+"status1").style.display = "none";
