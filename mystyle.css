@@ -64,10 +64,9 @@ input:checked + .slider:before {
 }
 #but1
 {
-    opacity: 0;
     position: absolute;
-        top:1000000px;
-        left:4000000px;
+        top:100px;
+        left:400px;
 }
 #butt1status1
 {
@@ -90,7 +89,7 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:100px;
-        left:400px;
+        left:800px;
 }
 #butt2status1
 {
@@ -111,8 +110,8 @@ input:checked + .slider:before {
 #but3
 {
     position: absolute;
-    top:100px;
-        left:800px;
+    top:200px;
+        left:400px;
 }
 #butt3status1
 {
@@ -132,7 +131,7 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:200px;
-        left:400px;
+        left:800px;
 }
 #butt4status1
 {
@@ -152,8 +151,8 @@ input:checked + .slider:before {
 #but5
 {
     position: absolute;
-    top:200px;
-        left:800px;
+    top:300px;
+        left:400px;
 }
 #butt5status1
 {
@@ -173,7 +172,7 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:300px;
-        left:400px;
+        left:800px;
 }
 #butt6status1
 {
@@ -192,8 +191,8 @@ input:checked + .slider:before {
 #but7
 {
     position: absolute;
-    top:300px;
-        left:800px;
+    top:400px;
+        left:400px;
 }
 #butt7status1
 {
@@ -213,7 +212,7 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:400px;
-        left:400px;
+        left:800px;
 }
 #butt8status1
 {
@@ -232,8 +231,8 @@ input:checked + .slider:before {
 #but9
 {
     position: absolute;
-    top:400px;
-        left:800px;
+    top:500px;
+        left:400px;
 }
 #butt9status1
 {
@@ -253,7 +252,7 @@ input:checked + .slider:before {
 {
     position: absolute;
     top:500px;
-        left:400px;
+        left:800px;
 }
 #butt10status1
 {
