@@ -65,6 +65,31 @@ function gotdata(data)
     
 }
 
+
+function gotdata2(data)
+{
+    var db = data.val();
+  var keys = Object.keys(db);
+  for (var i = 0; i < keys.length; i++) {
+    var k = keys[i];
+    var StaDet  = db[k].Status;
+      var h=i+1;
+      if(StaDet)
+      {
+        document.getElementById("but"+h).checked = true;
+        document.getElementById("but"+h+"status2").style.display = "block";
+        document.getElementById("but"+h+"status1").style.display = "none";
+      }
+      else if(!StaDet)
+      {
+          document.getElementById("but"+h).checked = false;
+        document.getElementById("but"+h+"status1").style.display = "block";
+        document.getElementById("but"+h+"status2").style.display = "none";
+      }
+  }
+    
+}
+
 function errdata(err)
 {
 console.log('Error');
@@ -77,18 +102,12 @@ function req(p)
 {
     var t;
    var database = firebase.database();
-    console.log("1"); 
     if (document.getElementById("but"+p).checked == true)
     {
         t=p-1;
-        console.log("2"); 
         document.getElementById("but"+p+"status2").style.display = "block";
-        console.log("4");
         document.getElementById("but"+p+"status1").style.display = "none";
-        console.log("5");
-        console.log("6");
         var ref = database.ref('Lab/'+applications[t]);
-        console.log("7");
         var data={
         Status: true
         }
@@ -100,7 +119,6 @@ function req(p)
     else if (document.getElementById("but"+p).checked == false)
     {
         t=p-1;
-        console.log("3"); 
         document.getElementById("but"+p+"status1").style.display = "block";
         document.getElementById("but"+p+"status2").style.display = "none";
         var ref = database.ref('Lab/'+applications[t]);
