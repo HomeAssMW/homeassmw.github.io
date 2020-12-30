@@ -1,5 +1,5 @@
 var p=0;
-var applications=["1 Home Theater","2 Laptop","3 Inside Light 1","4 Inside Light 2","5 OutSide Light Front","6 Outside Light Back","7 Fan","8 Night Lamp"];
+var applications=["1 Home Theater","2 Laptop","3 Inside Light 1","4 Inside Light 2","5 Outside Light Front","6 Outside Light Back","7 Fan","8 Night Lamp"];
 
 
 function initi()
