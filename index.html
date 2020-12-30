@@ -1,108 +1,272 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-     <title>live update</title>
-      <meta charset="UTF-8">
-       <meta name = "viewport" content="width=device-width,initial-scale=1">
-        <script type="text/javascript" src="https://homeassmw.github.io/auto.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-	    	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
 
-         <link rel = "stylesheet" type = "text/css" href = "mystyle.css" />
-    </head>
-	<body onload="javascript:initi()">
-	<p>Suggestions: <span id="txtHint"></span></p>
-	<p>Suggestions2: <span id="txtHint2"></span></p>
-	<p>Suggestions3: <span id="txtHint3"></span></p>
-	<br>
-	<br>
-	<div1 id="but1">
-	<label class="switch">
-	<input type="checkbox" id="butt1" onclick="req(1)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt1status1" style="display:none">Home Theater off</p>
-	<p id="butt1status2" style="display:none">Home Theater on</p>
-	</div1>
-	<div2 id="but2">
-	<label class="switch">
-	<input type="checkbox" id="butt2" onclick="req(2)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt2status1" style="display:none">Laptop off</p>
-	<p id="butt2status2" style="display:none">Laptop on</p>
-	</div2>
-	
-	<div3 id="but3">
-	<label class="switch">
-	<input type="checkbox" id="butt3" onclick="req(3)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt3status1" style="display:none">Inside Light 1 off</p>
-	<p id="butt3status2" style="display:none">Inside Light 1 on</p>
-	</div3>
-	
-	<div4 id="but4">
-	<label class="switch">
-	<input type="checkbox" id="butt4" onclick="req(4)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt4status1" style="display:none">Inside Light 2 off</p>
-	<p id="butt4status2" style="display:none">Inside Light 2 on</p>
-	</div4>
-	
-	<div5 id="but5">
-	<label class="switch">
-	<input type="checkbox" id="butt5" onclick="req(5)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt5status1" style="display:none">OutSide Light Front off</p>
-	<p id="butt5status2" style="display:none">OutSide Light Front on</p>
-	</div5>
-	
-	<div6 id="but6">
-	<label class="switch">
-	<input type="checkbox" id="butt6" onclick="req(6)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt6status1" style="display:none">Outside Light Back off</p>
-	<p id="butt6status2" style="display:none">Outside Light Back on</p>
-	</div6>
-	
-	<div7 id="but7">
-	<label class="switch">
-	<input type="checkbox" id="butt7" onclick="req(7)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt7status1" style="display:none">Fan off</p>
-	<p id="butt7status2" style="display:none">Fan on</p>
-	</div7>
-	
-	<div8 id="but8">
-	<label class="switch">
-	<input type="checkbox" id="butt8" onclick="req(8)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt8status1" style="display:none">Night Lamp off</p>
-	<p id="butt8status2" style="display:none">Night Lamp on</p>
-	</div8>
-	
-	<div9 id="but9">
-	<label class="switch">
-	<input type="checkbox" id="butt9" onclick="req(9)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt9status1" style="display:none">button is off</p>
-	<p id="butt9status2" style="display:none">button is on</p>
-	</div9>
-	
-	<div10 id="but10">
-	<label class="switch">
-	<input type="checkbox" id="butt10" onclick="req(10)">
-	<span class="slider"></span>
-	</label><br><br>
-	<p id="butt10status1" style="display:none">button is off</p>
-	<p id="butt10status2" style="display:none">button is on</p>
-	</div10>
-			    </body>
-</html>
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        #b1 {
+            position: absolute;
+            top: 100px;
+            left: 400px;
+        }
+        #b2 {
+            position: absolute;
+            top: 100px;
+            left: 800px;
+        }
+        #b3 {
+            position: absolute;
+            top: 200px;
+            left: 400px;
+        }
+        #b4 {
+            position: absolute;
+            top: 200px;
+            left: 800px;
+        }
+        #b5 {
+            position: absolute;
+            top: 300px;
+            left: 400px;
+        }
+        #b6 {
+            position: absolute;
+            top: 300px;
+            left: 800px;
+        }
+        #b7 {
+            position: absolute;
+            top: 400px;
+            left: 400px;
+        }
+        #b8 {
+            position: absolute;
+            top: 400px;
+            left: 800px;
+        }
+
+
+        #but1status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+        #but1status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+
+        #but2status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but2status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but3status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but3status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but4status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but4status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but5status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but5status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but6status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but6status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but7status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but7status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but8status1 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+        #but8status2 {
+            position: absolute;
+            top: -5px;
+            left: -100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div1 id="b1">
+        <label class="switch">
+            <input type="checkbox" id="but1">
+            <span class="slider round"></span>
+        </label>
+        <p id="but1status1" style="display:none">ON</p>
+        <p id="but1status2" style="display:block">OFF</p>
+    </div1>
+    <div2 id="b2">
+        <label class="switch">
+            <input type="checkbox" id="but2">
+            <span class="slider round"></span>
+        </label>
+        <p id="but2status1" style="display:none">ON</p>
+        <p id="but2status2" style="display:block">OFF</p>
+    </div2>
+    <div3 id="b3">
+        <label class="switch">
+            <input type="checkbox" id="but3">
+            <span class="slider round"></span>
+        </label>
+        <p id="but3status1" style="display:none">ON</p>
+        <p id="but3status2" style="display:block">OFF</p>
+    </div3>
+    <div4 id="b4">
+        <label class="switch">
+            <input type="checkbox" id="but4">
+            <span class="slider round"></span>
+        </label>
+        <p id="but4status1" style="display:none">ON</p>
+        <p id="but4status2" style="display:block">OFF</p>
+    </div4>
+    <div5 id="b5">
+        <label class="switch">
+            <input type="checkbox" id="but5">
+            <span class="slider round"></span>
+        </label>
+        <p id="but5status1" style="display:none">ON</p>
+        <p id="but5status2" style="display:block">OFF</p>
+    </div5>
+    <div6 id="b6">
+        <label class="switch">
+            <input type="checkbox" id="but6">
+            <span class="slider round"></span>
+        </label>
+        <p id="but6status1" style="display:none">ON</p>
+        <p id="but6status2" style="display:block">OFF</p>
+    </div6>
+    <div7 id="b7">
+        <label class="switch">
+            <input type="checkbox" id="but7">
+            <span class="slider round"></span>
+        </label>
+        <p id="but7status1" style="display:none">ON</p>
+        <p id="but7status2" style="display:block">OFF</p>
+    </div7>
+    <div8 id="b8">
+        <label class="switch">
+            <input type="checkbox" id="but8">
+            <span class="slider round"></span>
+        </label>
+        <p id="but8status1" style="display:none">ON</p>
+        <p id="but8status2" style="display:block">OFF</p>
+    </div8>
+</body>
+</html> 
