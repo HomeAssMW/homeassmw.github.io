@@ -51,15 +51,15 @@ function gotdata(data)
       var h=i+1;
       if(StaDet)
       {
-        document.getElementById("butt"+h).checked = true;
-        document.getElementById("butt"+h+"status2").style.display = "block";
-        document.getElementById("butt"+h+"status1").style.display = "none";
+        document.getElementById("but"+h).checked = true;
+        document.getElementById("but"+h+"status2").style.display = "block";
+        document.getElementById("but"+h+"status1").style.display = "none";
       }
       else if(!StaDet)
       {
-          document.getElementById("butt"+h).checked = false;
-        document.getElementById("butt"+h+"status1").style.display = "block";
-        document.getElementById("butt"+h+"status2").style.display = "none";
+          document.getElementById("but"+h).checked = false;
+        document.getElementById("but"+h+"status1").style.display = "block";
+        document.getElementById("but"+h+"status2").style.display = "none";
       }
   }
     
@@ -77,17 +77,15 @@ function req(p)
 {
     var t;
    var database = firebase.database();
-    document.getElementById("txtHint2").innerHTML=p;
     console.log("1"); 
-    if (document.getElementById("butt"+p).checked == true)
+    if (document.getElementById("but"+p).checked == true)
     {
         t=p-1;
         console.log("2"); 
-        document.getElementById("butt"+p+"status2").style.display = "block";
+        document.getElementById("but"+p+"status2").style.display = "block";
         console.log("4");
-        document.getElementById("butt"+p+"status1").style.display = "none";
+        document.getElementById("but"+p+"status1").style.display = "none";
         console.log("5");
-        document.getElementById("txtHint3").innerHTML="turning on";
         console.log("6");
         var ref = database.ref('Lab/'+applications[t]);
         console.log("7");
@@ -99,13 +97,12 @@ function req(p)
         
 
     } 
-    else if (document.getElementById("butt"+p).checked == false)
+    else if (document.getElementById("but"+p).checked == false)
     {
         t=p-1;
         console.log("3"); 
-        document.getElementById("butt"+p+"status1").style.display = "block";
-        document.getElementById("butt"+p+"status2").style.display = "none";
-        document.getElementById("txtHint3").innerHTML="turning off";
+        document.getElementById("but"+p+"status1").style.display = "block";
+        document.getElementById("but"+p+"status2").style.display = "none";
         var ref = database.ref('Lab/'+applications[t]);
         var data={
         Status: false
