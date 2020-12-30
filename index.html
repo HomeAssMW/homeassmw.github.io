@@ -2,6 +2,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://homeassmw.github.io/auto.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
     <style>
         .switch {
             position: relative;
@@ -203,10 +206,10 @@
 
     </style>
 </head>
-<body>
+<body onload="javascript:initi()">
     <div1 id="b1">
         <label class="switch">
-            <input type="checkbox" id="but1">
+            <input type="checkbox" id="but1" onclick="req(1)">
             <span class="slider round"></span>
         </label>
         <p id="but1status1" style="display:none">ON</p>
@@ -214,7 +217,7 @@
     </div1>
     <div2 id="b2">
         <label class="switch">
-            <input type="checkbox" id="but2">
+            <input type="checkbox" id="but2" onclick="req(2)">
             <span class="slider round"></span>
         </label>
         <p id="but2status1" style="display:none">ON</p>
@@ -222,7 +225,7 @@
     </div2>
     <div3 id="b3">
         <label class="switch">
-            <input type="checkbox" id="but3">
+            <input type="checkbox" id="but3" onclick="req(3)">
             <span class="slider round"></span>
         </label>
         <p id="but3status1" style="display:none">ON</p>
@@ -230,7 +233,7 @@
     </div3>
     <div4 id="b4">
         <label class="switch">
-            <input type="checkbox" id="but4">
+            <input type="checkbox" id="but4" onclick="req(4)">
             <span class="slider round"></span>
         </label>
         <p id="but4status1" style="display:none">ON</p>
@@ -238,7 +241,7 @@
     </div4>
     <div5 id="b5">
         <label class="switch">
-            <input type="checkbox" id="but5">
+            <input type="checkbox" id="but5" onclick="req(5)">
             <span class="slider round"></span>
         </label>
         <p id="but5status1" style="display:none">ON</p>
@@ -246,7 +249,7 @@
     </div5>
     <div6 id="b6">
         <label class="switch">
-            <input type="checkbox" id="but6">
+            <input type="checkbox" id="but6" onclick="req(6)">
             <span class="slider round"></span>
         </label>
         <p id="but6status1" style="display:none">ON</p>
@@ -254,7 +257,7 @@
     </div6>
     <div7 id="b7">
         <label class="switch">
-            <input type="checkbox" id="but7">
+            <input type="checkbox" id="but7" onclick="req(7)">
             <span class="slider round"></span>
         </label>
         <p id="but7status1" style="display:none">ON</p>
@@ -262,7 +265,7 @@
     </div7>
     <div8 id="b8">
         <label class="switch">
-            <input type="checkbox" id="but8">
+            <input type="checkbox" id="but8" onclick="req(8)">
             <span class="slider round"></span>
         </label>
         <p id="but8status1" style="display:none">ON</p>
