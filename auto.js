@@ -123,9 +123,9 @@ function req(p)
         document.getElementById("but"+p+"status2").style.display = "none";
         var ref = database.ref("Lab"+applications[t]);
         var data={
-        Status: false
+        "Status": false
         }
-        ref.set(data);
+        ref.update(data);
         ref.on('value', gotdata, errdata);
 
     }
