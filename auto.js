@@ -17,7 +17,7 @@ function initi()
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
    var database = firebase.database();
-    var ref = database.ref('Lab');
+    var ref = database.ref("Lab");
     ref.on('value', gotdata, errdata);
 
     
@@ -107,7 +107,7 @@ function req(p)
         t=p-1;
         document.getElementById("but"+p+"status2").style.display = "block";
         document.getElementById("but"+p+"status1").style.display = "none";
-        var ref = database.ref('Lab'+applications[t]);
+        var ref = database.ref("Lab"+applications[t]);
         var data={
         Status: true
         }
@@ -121,7 +121,7 @@ function req(p)
         t=p-1;
         document.getElementById("but"+p+"status1").style.display = "block";
         document.getElementById("but"+p+"status2").style.display = "none";
-        var ref = database.ref('Lab'+applications[t]);
+        var ref = database.ref("Lab"+applications[t]);
         var data={
         Status: false
         }
