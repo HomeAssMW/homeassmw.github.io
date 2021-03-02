@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+    <script>
+        $(function () {
+            $('.map').maphilight();
+        });
+    </script>
+    <style>
+        .butt1 {
+            position: absolute;
+            top: 500px;
+            left: 50px;
+        }
+
+        .butt2 {
+            position: absolute;
+            top: 50px;
+            right: 1000px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="second light off.bmp" usemap="#image-map" class="map">
+    <map name="image-map">
+        <area target="" alt="" title="" href="slon.html" coords="746,207,1197,229" shape="rect">
+    </map>
+    <form action="floff.html">
+        <input class=" butt1" type="submit" value="Front Side Of room" />
+    </form>
+    <form action="nloff.html">
+        <input class=" butt2" type="submit" value="Up Side Of room" />
+    </form>
+
+</body>
+
+</html>
