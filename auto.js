@@ -107,10 +107,8 @@ function req(p)
         t=p-1;
         document.getElementById("but"+p+"status2").style.display = "block";
         document.getElementById("but"+p+"status1").style.display = "none";
-        var ref = database.ref("Lab"+applications[t]);
-        var data={
-        "Status": true
-        }
+        var ref = database.ref("Lab"+applications[t]+"Status");
+        var data=true;
         ref.update(data);
         ref.on('value', gotdata, errdata);
         
@@ -121,10 +119,8 @@ function req(p)
         t=p-1;
         document.getElementById("but"+p+"status1").style.display = "block";
         document.getElementById("but"+p+"status2").style.display = "none";
-        var ref = database.ref("Lab"+applications[t]);
-        var data={
-        "Status": false
-        }
+        var ref = database.ref("Lab"+applications[t]+"Status");
+        var data=false;
         ref.update(data);
         ref.on('value', gotdata, errdata);
 
