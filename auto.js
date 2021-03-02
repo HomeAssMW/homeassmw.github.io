@@ -109,9 +109,9 @@ function req(p)
         document.getElementById("but"+p+"status1").style.display = "none";
         var ref = database.ref("Lab"+applications[t]);
         var data={
-        Status: true
+        "Status": true
         }
-        ref.set(data);
+        ref.update(data);
         ref.on('value', gotdata, errdata);
         
 
