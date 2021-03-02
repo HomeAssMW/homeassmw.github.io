@@ -109,7 +109,7 @@ function req(p)
         document.getElementById("but"+p+"status1").style.display = "none";
         var ref = database.ref("Lab"+applications[t]+"Status");
         var data=true;
-        ref.update(data);
+        ref.set(data);
         ref.on('value', gotdata, errdata);
         
 
@@ -121,7 +121,7 @@ function req(p)
         document.getElementById("but"+p+"status2").style.display = "none";
         var ref = database.ref("Lab"+applications[t]+"Status");
         var data=false;
-        ref.update(data);
+        ref.set(data);
         ref.on('value', gotdata, errdata);
 
     }
