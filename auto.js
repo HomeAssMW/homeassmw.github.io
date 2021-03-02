@@ -1,5 +1,5 @@
 var p=0;
-var applications=["1 Home Theater","2 Laptop","3 Inside Light 1","4 Inside Light 2","5 Outside Light Front","6 Outside Light Back","7 Fan","8 Night Lamp"];
+var applications=["/1 Home Theater/","/2 Laptop/","/3 Inside Light 1/","/4 Inside Light 2/","/5 Outside Light Front/","/6 Outside Light Back/","/7 Fan/","/8 Night Lamp/"];
 
 
 function initi()
@@ -107,7 +107,7 @@ function req(p)
         t=p-1;
         document.getElementById("but"+p+"status2").style.display = "block";
         document.getElementById("but"+p+"status1").style.display = "none";
-        var ref = database.ref('Lab/'+applications[t]);
+        var ref = database.ref('Lab'+applications[t]);
         var data={
         Status: true
         }
@@ -121,7 +121,7 @@ function req(p)
         t=p-1;
         document.getElementById("but"+p+"status1").style.display = "block";
         document.getElementById("but"+p+"status2").style.display = "none";
-        var ref = database.ref('Lab/'+applications[t]);
+        var ref = database.ref('Lab'+applications[t]);
         var data={
         Status: false
         }
