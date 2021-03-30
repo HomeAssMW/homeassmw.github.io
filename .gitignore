@@ -1,6 +1,6 @@
 # Compiled class file
 *.class
-config.js
+.config.js
 auto.js
 # Log file
 *.log
