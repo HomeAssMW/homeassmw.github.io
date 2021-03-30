@@ -4,15 +4,23 @@ var applications=["/1 Home Theater/","/2 Laptop/","/3 Inside Light 1/","/4 Insid
 
 function initi()
 { 
+    var apiKey = config.apiKey;
+    var authDomain = config.authDomain;
+    var databaseURL = config.databaseURL;
+    var projectId = config.projectId;
+    var storageBucket = config.storageBucket;
+    var messagingSenderId = config.messagingSenderId;
+    var appId = config.appId;
+    var measurementId = config.measurementId;
     var firebaseConfig = {
-    apiKey: "AIzaSyAlCeK_xNfjgQMPqNdFUB8Gc0yFzIj2Nys",
-    authDomain: "homeass-2528.firebaseapp.com",
-    databaseURL: "https://homeass-2528.firebaseio.com",
-    projectId: "homeass-2528",
-    storageBucket: "homeass-2528.appspot.com",
-    messagingSenderId: "973082369587",
-    appId: "1:973082369587:web:54c67a1630b2a044594d46",
-    measurementId: "G-24BQMQSFLL"
+    apiKey,
+    authDomain,
+    databaseURL,
+    projectId,
+    storageBucket,
+    messagingSenderId,
+    appId,
+    measurementId
    };
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
